@@ -31,10 +31,10 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
   
-  # get '/articles/:id/edit' do
-  #   @article = Article.find(params[:id])
-  #   erb :edit
-  # end
+  get '/articles/:id/edit' do
+    @article = Article.find(params[:id])
+    erb :edit
+  end
   
   # delete '/articles/:id/delete' do
   #   @article = Article.find(params[:id])
@@ -42,9 +42,9 @@ class ApplicationController < Sinatra::Base
   #   erb :delete
   # end
   
-  # patch '/articles/:id' do
-  #   article = Article.find(params[:id])
-  #   article.update(params)
-  #   redirect "/articles/#{article.id}"
-  # end
+  patch '/articles/:id' do
+    article = Article.find(params[:id])
+    article.update(params)
+    redirect "/articles/#{article.id}"
+  end
 end
