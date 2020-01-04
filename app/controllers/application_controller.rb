@@ -43,7 +43,7 @@ class ApplicationController < Sinatra::Base
   # end
   
   patch '/articles/:id' do
-    article = Article.find(params[:id])
+    article = Article.find(params[)
     binding.pry
     article.update(params)
     # binding.pry
