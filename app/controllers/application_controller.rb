@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
   get '/articles' do
     @articles = Article.all
     #binding.pry
-    erb :show
+    erb :index
   end
   
   get '/articles/new' do
