@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
   
   get '/articles' do
     @articles = Article.all
-    erb :index
+    erb :show
   end
   
   get '/articles/new' do
