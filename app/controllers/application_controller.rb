@@ -18,12 +18,11 @@ class ApplicationController < Sinatra::Base
   
   get '/articles/new' do
     @article = Article.new
-    binding.pry
     erb :new
   end
   
   post '/articles' do
-    Article.create(params)
+    @article = Article.create(params)
     redirect '/articles'
   end
   
