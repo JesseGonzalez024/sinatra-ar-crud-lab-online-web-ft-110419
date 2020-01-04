@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
   
   patch '/articles/:id' do
     @article = Article.find_by_id(params[:id])
-    @article.title = params[:name]
+    @article.title = params[:title]
     binding.pry
     @article.content = params[:content]
     @article.save
