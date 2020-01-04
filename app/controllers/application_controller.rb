@@ -17,6 +17,8 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/articles/new' do
+    @article = Article.new
+    binding.pry
     erb :new
   end
   
