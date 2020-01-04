@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
   
   get '/articles' do
     @articles = Article.all
-    binding.pry
+    #binding.pry
     erb :show
   end
   
